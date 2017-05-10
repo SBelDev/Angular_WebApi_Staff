@@ -1,0 +1,53 @@
+﻿<div ng-controller="ListEmpController">
+    <br />
+    <!--<a href="#/newEmp">Add new employee</a>-->
+    <a href="#/newEmp" class='btn btn-primary'>Add new employee</a>
+    <br />
+    <br />
+    <div>
+        <table cellpadding="12" class="table table-bordered table-hover">
+            <tr>
+                <td>
+                    <b>First Name</b>
+                </td>
+                <td>
+                    <b>Last Name</b>
+                </td>
+                <td>
+                    <b>Employment Date</b>
+                </td>
+                <td>
+                    <b>Rate, $</b>
+                </td>
+                <td>
+                    <b>Job Title</b>
+                </td>
+                <td>
+                    <b>Action</b>
+                </td>
+            </tr>
+            <tr ng-repeat="emp in employees">
+                <td>
+                    {{emp.FirstName}}
+                </td>
+                <td>
+                    {{emp.LastName}}
+                </td>
+                <td>
+                    {{emp.EmploymentDate}}
+                </td>
+                <td>
+                    {{emp.Rate}}
+                </td>
+                <td>
+                    {{emp.JobTitleName}}
+                </td>
+                <td>
+                    <!--<input type="button" ng-click="DeleteEmployee(emp)">-->
+                    <a ng-click='deleteEmployee(emp)'> Delete </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
